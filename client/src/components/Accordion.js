@@ -18,15 +18,18 @@ class Accordion extends React.Component {
 
   render () {
 
-    const buttonText = this.state.active ? 'Hide' : '+ Create a story'
+    const buttonText = this.state.active ? 'Hide' : 'Start a Game'
     const sliderClass = this.state.active ? "show" : "hide"
 
     return (
       <div>
-        <div className="toggleButtonWrap">
-          <button className="standardButton whiteButton" onClick={this.toggle}>{buttonText}</button>
-        </div>
-        <div className={sliderClass}>
+      {
+        // <div className="toggleButtonWrap">
+        //   <button className="standardButton whiteButton" onClick={this.toggle}>{buttonText}</button>
+        // </div>
+        
+      }
+        <div className="show">
           <CreateStory />
         </div>
       </div>

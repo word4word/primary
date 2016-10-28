@@ -1,10 +1,10 @@
-const db = require('../models/config')
-const User = require('../models/user')
+var db = require('../models/config')
+var User = require('../models/user')
 
 module.exports = {
 
   get: (req,res) => {
-  const user = {
+  var user = {
     id: req.user.facebookId,
     name: req.user.name,
     profileImage: req.user.profilePic
@@ -13,8 +13,8 @@ module.exports = {
 },
 
   post: (req, res) => {
-    const username =  req.body.username
-    const password = req.body.password
+    var username =  req.body.username
+    var password = req.body.password
     User.findOne({username: username})
     .then((user) => {
       if(!user) {
@@ -29,22 +29,22 @@ module.exports = {
           res.redirect('/')
         })
       } else {
-        const err = new Error({error: 'This username is already taken'})
+        var err = new Error({error: 'This username is already taken'})
         res.send(err)
       }
     })
   },
 
   verify: (req, res) => {
-    const username = req.body.username
-    const password = req.body.password
+    var username = req.body.username
+    var password = req.body.password
 
     User.findOne({username: username})
     .then((user) => {
       if(user){
         user.comparePassword(password, function(err, match) {
           if (match) {
-            const session = uuid.v4()
+            var session = uuid.v4()
             user.sessions = session
             user.save((data) => {
               res.cookie('sessionId', session)

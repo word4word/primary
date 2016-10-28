@@ -1,4 +1,4 @@
-const mongoose = require('mongoose')
+var mongoose = require('mongoose')
 mongoose.Promise = global.Promise
-const db = mongoose.connect(process.env.DBPATH)
+var db = mongoose.connect('localhost:51707')
 module.exports = db

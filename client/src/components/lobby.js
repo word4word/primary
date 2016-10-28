@@ -43,27 +43,30 @@ class Lobby extends React.Component {
     return (
       <div>
         <Accordion />
-        <div className='lobby'>
-          <div className="lobbyLabels">
-            <h4 className="storyNames">Story Name</h4>
-            <h4 className="numberOfUsers">Number of users</h4>
-            <h4 className="toggleDisplayLink"><a onClick={this.toggleDisplay}>{displayButtonText}</a></h4>
-          </div>
-          { this.state.displayComplete ?
+        {
+        // <div className='lobby'>
+        //   <div className="lobbyLabels">
+        //     <h4 className="storyNames">Room Name</h4>
+        //     <h4 className="numberOfUsers">Number of users</h4>
+        //     <h4 className="toggleDisplayLink"><a onClick={this.toggleDisplay}>{displayButtonText}</a></h4>
+        //   </div>
+        //   { 
+        //     this.state.displayComplete ?
 
-            this.state.completeStories.map((story, i) =>
-              <OpenStory story={story} key={i} />
-            )
+        //     this.state.completeStories.map((story, i) =>
+        //       <OpenStory story={story} key={i} />
+        //     )
 
-            :
+        //     :
 
-            this.state.openStories.map((story, i) =>
-              <OpenStory story={story} key={i} />
-            )
+        //     this.state.openStories.map((story, i) =>
+        //       <OpenStory story={story} key={i} />
+        //     )
             
-          }
+        //   }
 
-        </div>
+        // </div>
+        }
       </div>
     )
   }
