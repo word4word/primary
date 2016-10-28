@@ -1,23 +1,15 @@
 import React from 'react'
-import socket from '../../socket'
 
+const SpeechRoom = (props) =>{
 
-class SpeechRoom extends React.Component {
-
-  clicked(e){
-    var room = e.target.id
-    socket.emit("createRoom",room)
-  }
-
-  render () {
-	return(
-		<div className="speechroom">
-			<a id ="speech" onClick ={this.clicked.bind(this)} className="gamebutton">
+  return(
+    <div className="speechroom">
+      <a id="speech"onClick={props.onClick.bind(this)}className="gamebutton">
       Play in the Speech Room
     </a>
-		</div> 
-	)
-  }
+    </div> 
+  )
+
 }
 
 export default SpeechRoom

@@ -22,7 +22,7 @@ class RealLobby extends React.Component {
     }.bind(this))
 
     socket.emit("inLobby",true)
-    
+
     $.get('/score')
     .then(users => {
       console.log('Got users: ', users);
@@ -31,6 +31,12 @@ class RealLobby extends React.Component {
       })
     })
 
+  }
+
+  clicked(e){
+    var room = e.target.id
+    console.log(room)
+    socket.emit("createRoom",room)
   }
 
   render () {
@@ -45,7 +51,7 @@ class RealLobby extends React.Component {
               <LeaderBoard user={user} key={i}/>)
           } 
           </div>
-          <GameRoom /> 
+          <GameRoom onClick={this.clicked.bind(this)}/> 
         </div>
           
       </div>

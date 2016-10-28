@@ -1,25 +1,15 @@
 import React from 'react'
-import socket from '../../socket'
 
+const MusicRoom = (props) =>{
 
-class MusicRoom extends React.Component {
-
-  clicked(e){
-    var room = e.target.id
-    socket.emit("createRoom",room)
-  }
-
-
-  render () {
-	return(
-		<div className="musicroom">
-		<a id='music' onClick ={this.clicked.bind(this)} className="gamebutton">
+  return(
+    <div className="musicroom">
+    <a id="music" onClick={props.onClick.bind(this)} className="gamebutton">
       Play in the Music Room
     </a>
-			
-		</div> 
-	)
-  }
+      
+    </div> 
+  )
 }
 
 export default MusicRoom
