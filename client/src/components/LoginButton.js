@@ -5,7 +5,7 @@ import { Link } from 'react-router'
 const LoginButton = (props) => {
   return (
     <a href="/auth/facebook" className="standardButton facebookButton">
-      Login with facebook
+      Login with Facebook
     </a>
   )
 }

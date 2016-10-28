@@ -1,10 +1,10 @@
-var mongoose = require('mongoose')
-var Schema = mongoose.Schema
+const mongoose = require('mongoose')
+const Schema = mongoose.Schema
 //call on the line model for an attribute further
 //in the model
-var Line = require('./line')
+const Line = require('./line')
 
-var storySchema = new Schema({
+const storySchema = new Schema({
   //title of the story
   title: { type: String, required: true, unique: true },
   //list of user ids involved in this story
@@ -21,5 +21,5 @@ var storySchema = new Schema({
   lines: [ {type: Schema.ObjectId, ref: 'Line'} ]
 })
 
-var Story = mongoose.model('Story', storySchema)
+const Story = mongoose.model('Story', storySchema)
 module.exports = Story

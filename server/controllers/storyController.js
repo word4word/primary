@@ -1,7 +1,7 @@
-var db = require('../models/config')
-var Story = require('../models/story')
-var Line = require('../models/line')
-var User = require('../models/user')
+const db = require('../models/config')
+const Story = require('../models/story')
+const Line = require('../models/line')
+const User = require('../models/user')
 
 module.exports = {
   getAllStories: (req, res) => {
@@ -62,8 +62,11 @@ module.exports = {
     })
   },
   createStory: (req, res) => {
-    var title = req.body.title
-    var numberUsers = req.body.numberUsers * 1
+    console.log(req.body)
+    const title = req.body.title
+    const numberUsers = req.body.numberUsers * 1
+
+    console.log(req.user)
     User.findOne({facebookId: req.user.facebookId})
     .then((user)=>{
       new Story({title: title, length: numberUsers, users: [], numberUsers: numberUsers }).save()

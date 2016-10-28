@@ -1,4 +1,64 @@
-require("css!./stylesheet.css")
+body {
+  font-family: helvetica;
+  font-weight: 800;
+  background-color: white;
+  color: black;
+  text-align: center;
+}
+
+.standardButton {
+  font-size: 1.2em;
+  font-weight: 800;
+  border-radius: 6px;
+  text-align: center;
+  padding: 14px 30px;
+  width: 100%;
+  transition: ease-in-out 150ms;
+  margin: auto;
+}
+
+.blackButton {
+  color: white;
+  background-color: black;
+  border: 3px solid white;
+}
+
+.blackButton:hover {
+  color: black;
+  background-color: white;
+  border: 3px solid black;
+}
+
+.whiteButton {
+  color: black;
+  background-color: white;
+  border: 3px solid black;
+}
+
+.whiteButton:hover {
+  color: white;
+  background-color: black;
+  border: 3px solid white;
+}
+
+.facebookButton {
+  color: white;
+  background-color: #3b5998;
+  border: 3px solid white;
+  font-size: 1em;
+  font-weight: 800;
+  border-radius: 6px;
+  text-align: center;
+  padding: 10px 20px;
+  width: 100%;
+  transition: ease-in-out 150ms;
+}
+
+.facebookButton:hover {
+  color: #3b5998;
+  background-color: white;
+  border: 3px solid #3b5998;
+}require("css!./stylesheet.css")
 
 .lobby {
   text-align: left;
@@ -178,4 +238,95 @@ a:hover {
   position: relative;
   top: 50%;
   transform: translateY(-50%);
+}.signupWrap {
+  background-color: white;
+  padding: 15px;
+  border-radius: 5px;
+  width: 75%;
+  margin: auto;
+  color: black;
 }
+
+.signupButtonWrap {
+  margin: 10px auto 10px auto;
+  width: 30%;
+}
+
+.signupInput {
+  border: solid black 3px;
+  border-radius: 6px;
+  height: 50px;
+  width: 200px;
+  font-size: 1.3em;
+  margin: 0px 10px 0px 10px;
+}.navbarWrap {
+  color: white;
+  height: 80px;
+  margin-bottom: 15px;
+  background-color: black;
+  box-shadow: 3px 3px 0px #d7d7d7;
+}
+
+.headerLogo {
+  display: inline-block;
+  width: 45%;
+  text-align: left;
+}
+
+.headerLogButton {
+  display: inline-block;
+  width: 45%;
+  text-align: right;
+  margin-bottom: 5px;
+}
+
+a:link {
+  text-decoration: none;
+  color: white;
+}
+a:visited {
+  text-decoration: none;
+  color: white;
+}
+a:hover {
+  text-decoration: none;
+  color: white;
+}
+a:active {
+  text-decoration: none;
+  color: white;
+}require("css!./stylesheet.css")
+
+.gameleader{
+  float: right;
+  width: 100%;
+}
+
+.gamescorewrap {
+  background-color: white;
+  color: black;
+  border: solid 1px #d7d7d7;
+  border-radius: 5px;
+  margin: 10px;
+  padding: 10px;
+  box-shadow: 3px 3px 0px #d7d7d7;
+}
+
+.gameplayeravi {
+  display: inline-block;
+  width: 5%;
+  margin-left: -38%;
+}
+
+.gamescoreheader {
+    display: inline-block;
+    width: 30%;
+    padding-left: 5%;
+}
+
+.gameplayername {
+    font-size: 1.2em;
+    display: inline-block;
+    width: 32%;
+}
+

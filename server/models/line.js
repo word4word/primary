@@ -1,9 +1,9 @@
-var mongoose = require('mongoose')
-var Schema = mongoose.Schema
-var Story = require('./story')
-var User = require('./user')
-//creates the varant for the line model
-var lineSchema = new Schema({
+const mongoose = require('mongoose')
+const Schema = mongoose.Schema
+const Story = require('./story')
+const User = require('./user')
+//creates the constant for the line model
+const lineSchema = new Schema({
   //required attribute to assign the id to a user
   //a line must belong to only one user
   userId: { type: String, required: true },
@@ -13,5 +13,5 @@ var lineSchema = new Schema({
   story: {type: Schema.ObjectId, ref: 'Story'}
 })
 
-var Line = mongoose.model('Line', lineSchema)
+const Line = mongoose.model('Line', lineSchema)
 module.exports = Line

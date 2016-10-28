@@ -1,9 +1,9 @@
-var mongoose   = require('mongoose')
+const mongoose   = require('mongoose')
 //hashing tool
 //average number of rounds
-var Schema     = mongoose.Schema
+const Schema     = mongoose.Schema
 //set up for a new user
-var userSchema = new Schema({
+const userSchema = new Schema({
 //user name for a user, required
   name        : { type: String, required: true },
   //session id list for a user
@@ -13,8 +13,10 @@ var userSchema = new Schema({
 
   token       : String,
 
+  score		  : Number, 
+
   stories     : [ String ]
 })
 
-var User      = mongoose.model('User', userSchema)
+const User      = mongoose.model('User', userSchema)
 module.exports  = User
