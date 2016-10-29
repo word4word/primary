@@ -239,3 +239,8 @@ a:hover {
   width: 80%;
   margin: 0 auto;
 }
+
+.score-text {
+  color: white;
+  font-size: 24px;
+}

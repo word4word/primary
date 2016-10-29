@@ -4,18 +4,67 @@ var users = []
 var gameData = {
   videos: {
     speech: [
+     // {
+     //    title: "Mambo No Five",
+     //    id: 'EK_LN3XEcnw',
+     //    start: 3,
+     //    stop: 51,
+     //    finalStop: 53,
+     //    a: 'A little bit of Rita\'s all I need',
+     //    b: 'A little bit of Tina\'s what I see',
+     //    c: 'A little bit of Sandra in the sun',
+     //    d: 'A little bit of Monica in my life',
+     //    correct: 'd'
+     //  },
+     //   {
+     //    title: "answer",
+     //    id: 'EK_LN3XEcnw',
+     //    start: 3,
+     //    stop: 53,
+     //    finalStop: 53,
+     //    a: '',
+     //    b: '',
+     //    c: '',
+     //    d: 'A little bit of Monica in my life',
+     //    correct: 'd'
+     //  },
+     
+
+         {
+          title: 'Spice-Girls',
+          id: 'gJLIiF15wjQ',
+          start: 47,
+          stop: 60,
+          finalStop: 63,
+          a: '..wanna Big Mac, extra pickles',
+          b: '..wanna be my lover, you gotta get with my friends',
+          c: 'really, really, really wanna zigazig ah',
+          d: '..if you wanna get with me, better make it fast',
+          correct: 'c'
+      },
+         {
+          title: 'answer',
+          id: 'gJLIiF15wjQ',
+          start: 47,
+          stop: 63,
+          finalStop: 63,
+          a: '',
+          b: '',
+          c: 'really, really, really wanna zigazig ah',
+          d: '',
+          correct: 'c'
+      },
       { 
         title: 'Obama',
         id: 'xWx9zSy04uA',
         start: 18,
-        stop: 28,
+        stop: 27,
         finalStop: 37,
         a: 'that by working together, we can forge a new path to prosperity',
         b: 'that the principles upon which our nation were founded shall endure',
         c: 'that the state of our union is strong',
         d: 'that we will make America great again',
-        correct: 'c',
-        source: ""
+        correct: 'c'
      },
      { 
         title: 'answer',
@@ -25,33 +74,21 @@ var gameData = {
         a: "",
         b: "",
         c: 'that the state of our union is strong',
-        d: "",
-        source: "http://vocaroo.com/i/s0r6dv4jZt82"
+        d: ""
      },
-     {
-        title: 'MLK',
-        id: '1UV1fs8lAbg',
-        start: 732,
-        stop: 750,
-        finalStop: 770,
-        a: 'that my four little children will one day live in a nation where they are judged not by the color of their skin, but by the content of their character',
-        b: 'that one day this nation will rise up and live out the true meaning of its creed',
-        c: 'that one day, even the state of Missisippi, a state sweltering with the heat of injustice ... will be transformed into an oasis of freedom and justice',
-        d: 'that one day, I will save 15 percent on my car insurance by switiching to Geico',
-        correct: 'b',
-        source: ""
-     },
-    {
-        title: 'answer',
-        id: '1UV1fs8lAbg',
-        start: 732,
-        stop: 770,
-        a: "",
-        b: 'that one day this nation will rise up and live out the true meaning of its creed',
-        c: "",
-        d: "",
-        source: "http://vocaroo.com/i/s0r6dv4jZt82"
-     },    
+     // {
+     //    title: 'MLK',
+     //    id: '1UV1fs8lAbg',
+     //    start: 732,
+     //    stop: 750,
+     //    finalStop: 770,
+     //    a: 'that my four little children will one day live in a nation where they are judged not by the color of their skin, but by the content of their character',
+     //    b: 'that one day this nation will rise up and live out the true meaning of its creed',
+     //    c: 'that one day, even the state of Missisippi, a state sweltering with the heat of injustice ... will be transformed into an oasis of freedom and justice',
+     //    d: 'that one day, I will save 15 percent on my car insurance by switiching to Geico',
+     //    correct: 'b'
+     // },
+     
      {
         title: 'Reagan',
         id: 'YtYdjbpBk6A',
@@ -62,8 +99,7 @@ var gameData = {
         b: 'Tear down this wall!',
         c: 'Show me the money!',
         d: 'Open this gate!',
-        correct: 'd',
-        source: ""
+        correct: 'd'
      },
       {
          title: 'answer',
@@ -75,8 +111,7 @@ var gameData = {
         b: "",
         c: "",
         d: 'Open this gate!',
-        correct: 'd',
-        source: "http://vocaroo.com/i/s0r6dv4jZt82"
+        correct: 'd'
      },
       {
         title: 'Bush',
@@ -88,8 +123,7 @@ var gameData = {
         b: 'We\'ve had some setbacks',
         c: 'We\'ve had some disagreements',
         d: 'We\'ve lowered taxes',
-        correct: 'a',
-        source: ""
+        correct: 'a'
      },
            {
          title: 'answer',
@@ -101,8 +135,7 @@ var gameData = {
         b: '',
         c: '',
         d: '',
-        correct: 'a',
-        source: "http://vocaroo.com/i/s0r6dv4jZt82"
+        correct: 'a'
      },      
      {
         title: 'Lincoln',
@@ -114,8 +147,7 @@ var gameData = {
         b: 'We are now testing whether that nation, or any nation, can long endure',
         c: 'Now we are engaged in a great Civil War',
         d: 'That government of the people, by the people, for the people, shall not perish from this Earth',
-        correct: 'c',
-        source: ""
+        correct: 'c'
      },
       {
         title: 'answer',
@@ -127,9 +159,31 @@ var gameData = {
         b: '',
         c: 'Now we are engaged in a great Civil War',
         d: '',
-        correct: 'c',
-        source: "http://vocaroo.com/i/s0r6dv4jZt82"
-     }
+        correct: 'c'
+     },     
+     {
+        title: "Shake it off",
+        id: 'nfWlot6h_JM',
+        start: 0,
+        stop: 41,
+        finalStop: 44,    
+        a: '\'Cause the haters gonna hate, hate, hate, hate, hate',
+        b: '\'Cause the fakers gonna fake, fake, fake, fake, fake',
+        c: '\'Cause the players gonna play, play, play, play, play',
+        d: 'Baby, I\' m just gonna shake, shake, shake, shake, shake',
+        correct: 'c'
+      },
+        {
+        title: "answer",
+        id: 'nfWlot6h_JM',
+        start: 0,
+        stop: 44,
+        finalStop: 44,    
+        a: '',
+        b: '',
+        c: '\'Cause the players gonna play, play, play, play, play',
+        d: '',
+      }
     ],
     music: [
       {
@@ -258,11 +312,15 @@ var gameData = {
   }
 }
 
+var currentUser = require("./models/currentUsers")
+var totalScore = 0;
 var speechLength = gameData.videos.speech.length
 var speechIndex = 0
 var askedQuestions = {speech:[],music:[],mix:[]}
 var admins = ['10205631268421505']
 var startTime = 0;
+
+
 
 
 module.exports = function (io) {
@@ -283,7 +341,12 @@ module.exports = function (io) {
       }
       user.name = data.name
       user.avi = data.profileImage
-      users.push(user) 
+      var currentUsers = new currentUser({
+        name: user.name,
+        profilePic: user.avi,
+        socketId: socket.id
+      })
+      currentUsers.save()
       updateUsernames()
     })
 
@@ -331,12 +394,16 @@ module.exports = function (io) {
       }
       score = score || 0;
 
+      totalScore += score;
+      totalScore = Math.round(totalScore);
+      io.to(roomname).emit('scoreUpdate', totalScore)
+      
       console.log("score:",score)
     })
       
     socket.on("answerOver", function(){
       var roomname = getRoomName(socket)
-      console.log("answerOver event received!")
+      console.log("answer")
       setTimeout(function(){
         speechIndex++
         io.to(roomname).emit('question',gameData.videos[roomname][speechIndex])
@@ -346,21 +413,24 @@ module.exports = function (io) {
     socket.on("startTimer",function(time){
       var roomname = getRoomName(socket)
       startTime = time
-      console.log("startTimer event received!")
+      console.log("notAnswer")
       speechIndex++
-      console.log('20s timer started!')
       setTimeout(function(){
         io.to(roomname).emit('question',gameData.videos[roomname][speechIndex])
-        console.log('20s timer ended!')
       }, 20000)
     })
 
   
 
     socket.on("disconnect",function (data) {
-      users.splice(users.indexOf(socket.username,1))
-      updateUsernames()
+      console.log("disconnect",socket.id)
+      currentUser.find({'socketId': socket.id}).remove().then(function(e){
+        console.log("deleted user",e)
+      })
+
+      // currentUser.collection.remove()
       connections.splice(connections.indexOf(socket),1)
+      updateUsernames()
       console.log(" DISCONNECT: %s sockets connected",connections.length);  
     })
 
@@ -386,33 +456,31 @@ module.exports = function (io) {
     }
 
     var updateUsernames =  function() {
-      socket.emit('getUsers', users) 
+      var currentUsers = currentUser.find().then(function(user){
+
+        var blah = user.map(function(x){
+          var user = {name:x.name,profilePic:x.profilePic}
+          return user
+        })
+        // io.sockets.emit('getUsers', blah) 
+        console.log(blah)
+      })
     }
 
     var getRoomName = function(socket){
-      if (socket.rooms["music"]) {
-        return 'music';
-      } else if (socket.rooms['speech']) {
-        return 'speech';
-      } else if (socket.rooms['mix']) {
-        return 'mix';
-      } else {
-        return 'lobby';
-      } 
+      return socket.rooms["music"] ?
+        'music'
+      :
+      socket.rooms['speech'] ?
+       'speech'
+      :
+      socket.rooms['mix'] ?
+        'mix'
+      :
+        "lobby"
     }
-
-    //   return socket.rooms["music"] ?
-    //     'music'
-    //   :
-    //   socket.rooms['speech'] ?
-    //    'speech'
-    //   :
-    //   socket.rooms['mix'] ?
-    //     'mix'
-    //   :
-    //     "lobby"
-    // }
 
   })
 }
+
 

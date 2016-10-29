@@ -3,7 +3,6 @@ import LeaderBoard from './Leaderboard'
 import UserPanel from './UserPanel'
 import GameRoom from './GameRoom'
 import socket from '../../socket'
-import Admin from "./admin"
 import Game from './game'
 
 
@@ -56,7 +55,7 @@ class RealLobby extends React.Component {
 
       { 
         this.state.route ?
-        <Game lobbyname={this.state.route}/>
+        <Game lobbyname={this.state.route} admin ={this.state.admin}/>
         :
         <div className='lobby'>
           <div className="lobbyLabels">
