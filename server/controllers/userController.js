@@ -1,6 +1,7 @@
 
 const db = require('../models/config')
 const User = require('../models/user')
+const currentUser= require('../models/currentUsers')
 
 module.exports = {
 
@@ -104,6 +105,17 @@ module.exports = {
       console.log(err);
       return res.status(500).send('idk lol');
     });   
+  }, 
+
+  current: (req, res) => {
+    currentUser.find()
+    .then((users)=>{
+      console.log('this worked current', users)
+      res.status(200).send(users)
+    })
+    .catch((err) =>{
+      console.log('this current didnt work', err)
+    })
   }
 
 };

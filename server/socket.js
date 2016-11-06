@@ -324,6 +324,7 @@ var startTime = 0;
 
 
 module.exports = function (io) {
+   
   io.sockets.on("connection",function(socket){
     connections.push(socket)
     console.log(" %s user connected",connections.length);
@@ -422,10 +423,10 @@ module.exports = function (io) {
 
   
 
-    socket.on("disconnect",function (data) {
-      console.log("disconnect",socket.id)
-      currentUser.find({'socketId': socket.id}).remove().then(function(e){
-        console.log("deleted user",e)
+      socket.on("disconnect",function (data) {
+      console.log("disconnect")
+      currentUser.findOne({'socketId': socket.id}).remove().then(function(e){
+        console.log("deleted user")
       })
 
       // currentUser.collection.remove()
@@ -460,9 +461,10 @@ module.exports = function (io) {
 
         var blah = user.map(function(x){
           var user = {name:x.name,profilePic:x.profilePic}
+          console.log("^^^^^^^^^^^", user)
           return user
         })
-        // io.sockets.emit('getUsers', blah) 
+        socket.emit('getUsers', blah) 
         console.log(blah)
       })
     }

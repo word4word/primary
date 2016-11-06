@@ -5,8 +5,8 @@ const CurrentUsers = (props) =>{
 	return(
 		<div className="curwrap">
 			<div className="onlineuser">
-			  <div className="curuseravi">Users photo</div>
-        <div className="curusername">Users Name</div>
+			  <div className="curuseravi"><img src={props.users.profilePic} id="curuserimg"></img></div>
+        <div className="curusername">{props.users.name}</div>
 			</div>
 		</div> 
 	)
